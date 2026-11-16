@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header class="topo">
+        <div class="logo">
+            <span class="icone">✦</span>
+            <div>
+                <h1>Minhas Notas</h1>
+                <p>Suas ideias em um só lugar.</p>
+            </div>
+        </div>
+        <button class="perfil">N</button>
+    </header>
+
+    <main>
+        <section class="boas-vindas">
+            <h2>Olá! 👋</h2>
+            <p>O que vamos organizar hoje?</p>
+        </section>
+
+        <section class="pesquisa">
+            <span>⌕</span>
+            <input type="search" id="campoPesquisa"
+            placeholder="Pesquisar anotações...">
+        </section>
+
+        <section class="atalhos">
+            <button id="botaoNovaNota" class="botao-nova">
+                ＋ Nova anotação
+            </button>
+        </section>
+
+        <section class="secao-notas">
+            <div class="titulo-secao">
+                <h2>Minhas anotações</h2>
+                <span id="contadorNotas">0 notas</span>
+            </div>
+
+            <div class="categorias">
+                <button class="categoria ativa" data-categoria="Todas">Todas</button>
+                <button class="categoria" data-categoria="Pessoal">Pessoal</button>
+                <button class="categoria" data-categoria="Estudos">Estudos</button>
+                <button class="categoria" data-categoria="Ideias">Ideias</button>
+            </div>
+
+            <div id="listaNotas" class="lista-notas">
+                <div class="estado-vazio">
+                    <span>📝</span>
+                    <h3>Nenhuma anotação ainda</h3>
+                    <p>Toque em "Nova anotação" para começar!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Bloco de Notas Inteligente</p>
+        <span>Organize suas ideias ✦</span>
+    </footer>
+
+</div>
+
+<!-- JANELA DE CRIAÇÃO DE NOTAS -->
+
+<div id="modalNota" class="modal">
+    <div class="modal-conteudo">
+
+        <div class="modal-topo">
+            <div>
+                <h2 id="tituloModal">Nova anotação</h2>
+                <p>Registre suas ideias e pensamentos.</p>
+            </div>
+            <button id="fecharModal" class="fechar-modal">✕</button>
+        </div>
+
+        <label for="tituloNota">Título</label>
+        <input
+            type="text"
+            id="tituloNota"
+            placeholder="Dê um nome à sua anotação..."
+        >
+
+        <label for="conteudoNota">Sua anotação</label>
+        <textarea
+            id="conteudoNota"
+            placeholder="Comece a escrever suas ideias aqui..."
+        ></textarea>
+
+        <label for="categoriaNota">Categoria</label>
+        <select id="categoriaNota">
+            <option value="Pessoal">Pessoal</option>
+            <option value="Estudos">Estudos</option>
+            <option value="Ideias">Ideias</option>
+        </select>
+
+        <div class="modal-acoes">
+            <button id="cancelarNota" class="cancelar-btn">
+                Cancelar
+            </button>
+            <button id="salvarNota" class="salvar-btn">
+                Salvar anotação
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

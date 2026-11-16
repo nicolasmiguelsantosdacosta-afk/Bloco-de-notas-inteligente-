@@ -1,0 +1,18 @@
+{
+  "name": "Bloco de Notas Inteligente",
+  "short_name": "Minhas Notas",
+  "description": "Um lugar simples para organizar suas ideias.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#10111f",
+  "theme_color": "#7554ed",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
